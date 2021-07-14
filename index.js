@@ -110,7 +110,7 @@ function removeLastFlavor(array) {
   return array;
 }
 
-console.log(removeLastFlavor(originalFlavors));
+console.log("task 4", removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -128,7 +128,7 @@ function getFlavorByIndex(array, index) {
   return array[index]
 }
 
-console.log(getFlavorByIndex(originalFlavors, 2));
+console.log("task 5", getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -181,9 +181,21 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/) {
-  /*your code here*/
+function filterByWord(array, string) {
+  //set up the new array that we want to push our results to
+  const filteredArray = [];
+  //loop through the entire array and check each index to see if it includes a string
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(string)) {
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
 }
+
+console.log("task 7", filterByWord(originalFlavors, "Chocolate"));
+console.log("task 7", filterByWord(originalFlavors, "Vanilla"));
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
