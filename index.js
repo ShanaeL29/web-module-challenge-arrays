@@ -146,9 +146,6 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, flavor) {
-  //creating a new array that we can push our reults to
-  //not needed for this problem but : const newArray = []
-  //looping through the entire array and checking every index
   for (let i = 0; i < array.length; i++) {
     if (array[i] === flavor) {
       array.splice(i, 1);
@@ -158,7 +155,6 @@ function removeFlavorByName(array, flavor) {
 }
 
 console.log("task 6", removeFlavorByName(originalFlavors, "Rocky Road"));
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
