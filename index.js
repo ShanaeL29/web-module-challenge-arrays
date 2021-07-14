@@ -49,7 +49,7 @@ function copy(array) {
   return [...array];
 }
 
-console.log(copy(originalFlavors));
+console.log("task 1", copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -71,7 +71,7 @@ function is31Flavors(array) {
   }
 }
 
-console.log(is31Flavors(originalFlavors, 31));
+console.log("task 2", is31Flavors(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -92,7 +92,7 @@ function addFlavor(array, string) {
   return array;
 }
 
-console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+console.log("task 3", addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -124,11 +124,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(array, number) {
-  return array[number]
+function getFlavorByIndex(array, index) {
+  return array[index]
 }
 
-console.log(getFlavorByIndex(originalFlavors, 4));
+console.log(getFlavorByIndex(originalFlavors, 2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -145,9 +145,19 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
-  /*your code here*/
+function removeFlavorByName(array, flavor) {
+  //creating a new array that we can push our reults to
+  //not needed for this problem but : const newArray = []
+  //looping through the entire array and checking every index
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === flavor) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
 }
+
+console.log("task 6", removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 
